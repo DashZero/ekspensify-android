@@ -114,7 +114,7 @@ private fun PieChartRow(
                     contentDescription = null,
                 )
                 VerticalSpace(15.dp)
-                Text("No Data Found!", style = MaterialTheme.typography.bodyMedium)
+                Text(stringResource(R.string.no_data_found), style = MaterialTheme.typography.bodyMedium)
             }
         } else {
             Chart(categoryList)
@@ -129,9 +129,9 @@ private fun StartEndDateColumn(query: InsightsQueryModel) {
     Column(
         horizontalAlignment = Alignment.End,
     ) {
-        DateLabel("from", startDateTime.formatZonedDateTime(DateFormat.dd_MMM_yyyy_))
+    DateLabel(stringResource(R.string.from_label), startDateTime.formatZonedDateTime(DateFormat.dd_MMM_yyyy_))
         VerticalSpace(20.dp)
-        DateLabel("to", endDateTime.formatZonedDateTime(DateFormat.dd_MMM_yyyy_))
+    DateLabel(stringResource(R.string.to_label), endDateTime.formatZonedDateTime(DateFormat.dd_MMM_yyyy_))
     }
 }
 

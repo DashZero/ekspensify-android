@@ -5,8 +5,8 @@ import com.ekspensify.app.R
 
 data class IntroPages(
     val image: Int,
-    val title: String,
-    val description: String,
+    val titleRes: Int,
+    val descriptionRes: Int,
 ) {
     companion object {
         fun getPages(): List<IntroPages> {
@@ -14,24 +14,24 @@ data class IntroPages(
             pages.add(
                 IntroPages(
                     image = R.drawable.ic_onboarding_1,
-                    title = "Ekspensify",
-                    description = "Tracking money made easy, so you can stress less and enjoy more!"
+                    titleRes = R.string.onboarding_title_1,
+                    descriptionRes = R.string.onboarding_desc_1
                 )
             )
 
             pages.add(
                 IntroPages(
                     image = R.drawable.ic_onboarding_2,
-                    title = "Auto Tracking",
-                    description = "Automatically track and categorize your expenses in real-time."
+                    titleRes = R.string.onboarding_title_2,
+                    descriptionRes = R.string.onboarding_desc_2
                 )
             )
 
             pages.add(
                 IntroPages(
                     image = R.drawable.ic_onboarding_3,
-                    title = "Set Budgets",
-                    description = "Set budgets, control expenses, and save smarter."
+                    titleRes = R.string.onboarding_title_3,
+                    descriptionRes = R.string.onboarding_desc_3
                 )
             )
 

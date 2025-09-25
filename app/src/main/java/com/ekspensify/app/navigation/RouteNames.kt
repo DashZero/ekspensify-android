@@ -51,6 +51,10 @@ object ProfileScreenRoute
 object AboutScreenRoute
 
 
+@Serializable
+object LanguageScreenRoute
+
+
 /**
  * Account Screens
  */

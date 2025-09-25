@@ -191,7 +191,7 @@ fun FilterScreen(
                 horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally)
             ) {
                 FilledButton(
-                    text = "Cancel",
+                    text = stringResource(id = R.string.cancel),
                     onClick = singleClick {
                         navController.navigateUp()
                     },
@@ -203,7 +203,7 @@ fun FilterScreen(
                     )
                 )
                 FilledButton(
-                    text = "Apply",
+                    text = stringResource(id = R.string.apply),
                     onClick = singleClick {
                         val requestModel = TransactionQueryModel(
                             type = selectedFilterState.value.type?.toString(),
@@ -283,7 +283,7 @@ fun FilterTitleListView(
         }
         item {
             Text(
-                "Reset",
+                stringResource(id = R.string.reset),
                 style = MaterialTheme.typography.bodyMedium.copy(color = Red100),
                 modifier = Modifier
                     .padding(start = 16.dp, bottom = 20.dp)

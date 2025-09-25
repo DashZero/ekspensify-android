@@ -24,6 +24,8 @@ import com.ekspensify.app.ui.theme.EkspensifyTheme
 import com.ekspensify.app.utils.internet.InternetChecker
 import com.ekspensify.app.utils.smsReceiver.SmsHelper
 import com.ekspensify.app.utils.spUtils.SpUtilsManager
+import java.util.Locale
+import android.content.res.Configuration
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -61,6 +63,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Apply saved language preference at startup
+        val currentLang = spUtilsManager.languagePreference.value
+        applyLocaleIfNeeded(currentLang)
+
+        // Observe language preference changes and recreate activity when it changes
+        val lifecycleOwner = this
+        lifecycleOwner.lifecycle.addObserver(
+            androidx.lifecycle.LifecycleEventObserver { _, event ->
+                // no-op, we use StateFlow collection inside Compose below if needed
+            }
+        )
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.auto(
                 android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT
@@ -71,6 +84,12 @@ class MainActivity : AppCompatActivity() {
 //            )
         )
         setContent {
+            // collect language preference inside Compose to react to runtime changes
+            val langPref by spUtilsManager.languagePreference.collectAsState()
+            // If the language preference changed to a non-system value, apply and recreate
+            androidx.compose.runtime.LaunchedEffect(langPref) {
+                applyLocaleIfNeeded(langPref)
+            }
             DisposableEffect(Unit) {
                 internetChecker.startTracking()
                 onDispose {
@@ -102,6 +121,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         setNotificationEvent(intent)
+    }
+
+    private fun applyLocaleIfNeeded(language: String) {
+        val localeToApply = when (language) {
+            "system" -> null
+            "en" -> Locale("en")
+            "th" -> Locale("th")
+            else -> null
+        }
+        localeToApply?.let { locale ->
+            val res = resources
+            val conf = Configuration(res.configuration)
+            if (conf.locales != null && conf.locales.get(0) == locale) return
+            conf.setLocale(locale)
+            res.updateConfiguration(conf, res.displayMetrics)
+            // Recreate activity to apply new locale resources
+            recreate()
+        }
     }
 
 

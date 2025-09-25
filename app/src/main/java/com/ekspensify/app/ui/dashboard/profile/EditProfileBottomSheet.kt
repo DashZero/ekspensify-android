@@ -119,7 +119,7 @@ fun EditProfileBottomSheet(
 
             CustomOutlineTextField(
                 state = editTextState,
-                placeholder = "Enter Your Name",
+                placeholder = stringResource(R.string.please_enter_your_name),
                 isExpendable = false,
                 focusRequester = focusRequester
             )
@@ -131,13 +131,13 @@ fun EditProfileBottomSheet(
                             fontWeight = FontWeight.SemiBold
                         )
                     ) {
-                        append("Email : ")
+                        append(stringResource(R.string.email) + " : ")
                     }
                     append(user.email)
                 }, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.fillMaxWidth()
             )
             FilledButton(
-                text = "Update",
+                text = stringResource(R.string.update),
                 onClick = {
                     val requestModel = UserResponseModel(
                         name = editTextState.value.text,

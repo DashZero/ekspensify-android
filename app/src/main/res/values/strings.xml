@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ekspensify</string>
+    <string name="app_name">HoneyPot</string>
     <string name="become_your_own_money_manager_and_make_every_rupee_count">Become your own money manager and make every Rupee count</string>
     <string name="sign_up">Sign Up</string>
     <string name="login">Login</string>
@@ -124,7 +124,9 @@
     <string name="breakdown">Breakdown</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_service">Terms of Service</string>
-    <string name="and">" and "</string>
+    <string name="about">About</string>
+    <string name="version_format">Version : %s</string>
+    <string name="and">and</string>
     <string name="by_signing_up_you_agree_to_the">"By signing up, you agree to the "</string>
     <string name="swipe_to_enable">Swipe to Enable</string>
     <string name="safe_secure"><![CDATA[Safe & Secure]]></string>
@@ -132,4 +134,30 @@
     <string name="support_request_ekspensify">Support Request - Ekspensify</string>
     <string name="select_start_date">Select Start Date</string>
     <string name="select_end_date">Select End Date</string>
+    <!-- Onboarding strings -->
+    <string name="onboarding_title_1">HoneyPot</string>
+    <string name="onboarding_desc_1">Tracking money made easy, so you can stress less and enjoy more!</string>
+    <string name="onboarding_title_2">Auto Tracking</string>
+    <string name="onboarding_desc_2">Automatically track and categorize your expenses in real-time.</string>
+    <string name="onboarding_title_3">Set Budgets</string>
+    <string name="onboarding_desc_3">Set budgets, control expenses, and save smarter.</string>
+    <string name="no_data_found">No Data Found!</string>
+    <string name="from_label">from</string>
+    <string name="to_label">to</string>
+    <string name="select_language">Select Language</string>
+    <string name="language_system">System Default</string>
+    <string name="language_english">English</string>
+    <string name="language_thai">ไทย (Thai)</string>
+    <string name="language">Language</string>
+    <!-- Batch2 localization keys -->
+    <string name="apply">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="currency_rupee">₹</string>
+    <string name="sms_permission">SMS Permission</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="by_granting_permission">By granting permission, you agree to our</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="no_otps">No OTPs</string>
+    <string name="no_personal_sms">No Personal SMS</string>
+    <string name="fully_local">Fully Local</string>
 </resources>

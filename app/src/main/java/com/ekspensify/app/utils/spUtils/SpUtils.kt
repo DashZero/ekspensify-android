@@ -100,5 +100,10 @@ class SpUtils @Inject constructor(val context: Context) {
         private const val CATEGORIES = "CATEGORIES"
         private const val THEME_PREFERENCE = "THEME_PREFERENCE"
         private const val IS_AUTO_TRACKING_ENABLE = "IS_AUTO_TRACKING_ENABLE"
+        private const val LANGUAGE_PREFERENCE = "LANGUAGE_PREFERENCE"
     }
+
+    var languagePreference: String
+        get() = getDataByKey(LANGUAGE_PREFERENCE, "system")
+        set(value) = storeDataByKey(LANGUAGE_PREFERENCE, value)
 }

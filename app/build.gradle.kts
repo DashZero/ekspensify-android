@@ -25,7 +25,12 @@ android {
     compileSdk = 35
 
     val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
+    val localPropsFile = project.rootProject.file("local.properties")
+    if (localPropsFile.exists()) {
+        properties.load(localPropsFile.inputStream())
+    } else {
+        logger.warn("local.properties not found at ${localPropsFile.absolutePath} — using defaults for buildConfig fields and signing configs")
+    }
     defaultConfig {
         applicationId = "com.ekspensify.app"
         minSdk = 25
@@ -39,16 +44,20 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "CLIENT_ID", properties.getProperty("CLIENT_ID"))
-        buildConfigField("String", "ONESIGNAL_APP_ID", properties.getProperty("ONESIGNAL_APP_ID"))
+    val clientIdProp = properties.getProperty("CLIENT_ID") ?: ""
+    val oneSignalProp = properties.getProperty("ONESIGNAL_APP_ID") ?: ""
+    buildConfigField("String", "CLIENT_ID", "\"$clientIdProp\"")
+    buildConfigField("String", "ONESIGNAL_APP_ID", "\"$oneSignalProp\"")
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file(properties.getProperty("RELEASE_STORE_FILE"))
-            storePassword = properties.getProperty("RELEASE_STORE_PASSWORD")
-            keyAlias = properties.getProperty("RELEASE_KEY_ALIAS")
-            keyPassword = properties.getProperty("RELEASE_KEY_PASSWORD")
+            properties.getProperty("RELEASE_STORE_FILE")?.let { path ->
+                storeFile = file(path)
+            }
+            storePassword = properties.getProperty("RELEASE_STORE_PASSWORD") ?: ""
+            keyAlias = properties.getProperty("RELEASE_KEY_ALIAS") ?: ""
+            keyPassword = properties.getProperty("RELEASE_KEY_PASSWORD") ?: ""
         }
     }
 
@@ -57,11 +66,13 @@ android {
     productFlavors {
         create("server") {
             dimension = "base_url"
-            buildConfigField("String", "BASE_URL", properties.getProperty("SERVER_HOST_API"))
+            val serverHost = properties.getProperty("SERVER_HOST_API") ?: ""
+            buildConfigField("String", "BASE_URL", "\"$serverHost\"")
         }
         create("local") {
             dimension = "base_url"
-            buildConfigField("String", "BASE_URL", properties.getProperty("LOCAL_HOST_API"))
+            val localHost = properties.getProperty("LOCAL_HOST_API") ?: ""
+            buildConfigField("String", "BASE_URL", "\"$localHost\"")
         }
     }
 

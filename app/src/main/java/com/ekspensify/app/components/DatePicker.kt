@@ -12,6 +12,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import com.ekspensify.app.R
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -70,7 +72,7 @@ fun CustomDatePicker(
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 FilledButton(
-                    text = "Cancel",
+                    text = stringResource(R.string.cancel),
                     modifier = Modifier.weight(1f),
                     textStyle = MaterialTheme.typography.bodyMedium,
                     colors = ButtonDefaults.buttonColors(
@@ -80,7 +82,7 @@ fun CustomDatePicker(
                     onClick = onDismiss
                 )
                 FilledButton(
-                    text = "Set Date",
+                    text = stringResource(R.string.set_month),
                     textStyle = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(1f),
                     onClick = {

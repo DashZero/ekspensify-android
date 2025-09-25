@@ -46,6 +46,7 @@ import com.ekspensify.app.components.VerticalSpace
 import com.ekspensify.app.data.ApiResponse
 import com.ekspensify.app.data.model.responseModel.UserResponseModel
 import com.ekspensify.app.navigation.AboutScreenRoute
+import com.ekspensify.app.navigation.LanguageScreenRoute
 import com.ekspensify.app.navigation.AccountScreenRoute
 import com.ekspensify.app.navigation.AutoTrackingScreenRoute
 import com.ekspensify.app.navigation.CategoriesScreenRoute
@@ -234,7 +235,7 @@ private fun ColumnScope.UserInfo(
 @Composable
 private fun ProfileListItem(profileOptions: ProfileOptions, onClick: () -> Unit) {
     CustomListItem(
-        title = profileOptions.title,
+        title = stringResource(profileOptions.titleRes),
         leadingContent = {
             ListIcon(profileOptions.icon)
         },
@@ -280,6 +281,10 @@ private fun handleProfileOptionClick(
 
         ProfileOptions.ABOUT -> {
             navController.navigate(AboutScreenRoute)
+        }
+
+        ProfileOptions.LANGUAGE -> {
+            navController.navigate(LanguageScreenRoute)
         }
 
         ProfileOptions.LOGOUT -> {

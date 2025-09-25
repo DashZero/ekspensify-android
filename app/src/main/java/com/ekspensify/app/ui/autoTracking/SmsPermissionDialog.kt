@@ -72,7 +72,7 @@ fun SmsPermissionDialog(
         ) {
             SmsIcon()
             Text(
-                "SMS Permission",
+                stringResource(id = R.string.sms_permission),
                 style = MaterialTheme.typography.bodyLarge
             )
             Text(
@@ -86,7 +86,7 @@ fun SmsPermissionDialog(
             Highlights()
             VerticalSpace(1.dp)
             FilledButton(
-                text = "Grant Permission",
+                text = stringResource(id = R.string.grant_permission),
                 textModifier = Modifier.padding(vertical = 12.dp),
                 shape = CircleShape,
                 textStyle = MaterialTheme.typography.bodyLarge,
@@ -116,13 +116,13 @@ fun SmsPermissionDialog(
 private fun TermsAndPrivacyText() {
     Text(
         buildAnnotatedString {
-            append("By granting permission, you agree to our")
+            append(stringResource(id = R.string.by_granting_permission))
             withStyle(SpanStyle(color = MaterialTheme.colorScheme.primary)) {
-                append("\nTerms of Use")
+                append("\n" + stringResource(id = R.string.terms_of_use))
             }
-            append(" and ")
+            append(" " + stringResource(id = R.string.and))
             withStyle(SpanStyle(color = MaterialTheme.colorScheme.primary)) {
-                append("Privacy Policy.")
+                append(stringResource(id = R.string.privacy_policy))
             }
         },
         style = MaterialTheme.typography.labelSmall,
@@ -139,7 +139,7 @@ private fun Highlights() {
         maxItemsInEachRow = 2
     ) {
         DrawableStartText(
-            text = "No OTPs",
+            text = stringResource(id = R.string.no_otps),
             icon = R.drawable.ic_vault,
             iconSpace = 5.dp,
             color = MaterialTheme.extendedColors.iconColor,
@@ -151,7 +151,7 @@ private fun Highlights() {
                 .padding(horizontal = 8.dp, vertical = 5.dp)
         )
         DrawableStartText(
-            text = "No Personal SMS",
+            text = stringResource(id = R.string.no_personal_sms),
             icon = R.drawable.ic_vault,
             iconSpace = 5.dp,
             color = MaterialTheme.extendedColors.iconColor,
@@ -163,7 +163,7 @@ private fun Highlights() {
                 .padding(horizontal = 8.dp, vertical = 5.dp)
         )
         DrawableStartText(
-            text = "Fully Local",
+            text = stringResource(id = R.string.fully_local),
             icon = R.drawable.ic_vault,
             iconSpace = 5.dp,
             color = MaterialTheme.extendedColors.iconColor,

@@ -39,6 +39,7 @@ import com.ekspensify.app.ui.dashboard.budget.BudgetDetailsScreen
 import com.ekspensify.app.ui.dashboard.budget.BudgetTransactionScreen
 import com.ekspensify.app.ui.dashboard.budget.CreateBudgetScreen
 import com.ekspensify.app.ui.dashboard.profile.AboutScreen
+import com.ekspensify.app.ui.dashboard.profile.LanguageScreen
 import com.ekspensify.app.ui.dashboard.transactions.CreateTransactionScreen
 import com.ekspensify.app.ui.dashboard.transactions.FilterScreen
 import com.ekspensify.app.ui.export.ExportScreen
@@ -189,6 +190,10 @@ fun NavGraph(
         // About Screen
         composable<AboutScreenRoute> {
             AboutScreen(navController)
+        }
+
+        composable<LanguageScreenRoute> {
+            LanguageScreen(navController)
         }
 
     }

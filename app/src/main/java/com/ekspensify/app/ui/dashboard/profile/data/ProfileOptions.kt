@@ -11,16 +11,17 @@ import com.ekspensify.app.ui.theme.Yellow20
 
 
 enum class ProfileOptions(
-    val title: String,
+    val titleRes: Int,
     @DrawableRes val icon: Int,
     val iconColor: Color = Violet20
 ) {
-    ACCOUNT("Accounts", R.drawable.ic_wallet, Violet20),
-    CATEGORY("Categories", R.drawable.ic_category, Yellow20),
-    AUTO_TRACKING("Auto Tracking", R.drawable.ic_autotracking),
-    EXPORT("Export", R.drawable.ic_exoprt, Green20),
-    ABOUT("About", R.drawable.ic_about, Blue20),
-    LOGOUT("Logout", R.drawable.ic_logout, Red20);
+    ACCOUNT(R.string.accounts, R.drawable.ic_wallet, Violet20),
+    CATEGORY(R.string.categories, R.drawable.ic_category, Yellow20),
+    AUTO_TRACKING(R.string.auto_tracking, R.drawable.ic_autotracking),
+    EXPORT(R.string.export, R.drawable.ic_exoprt, Green20),
+    ABOUT(R.string.about, R.drawable.ic_about, Blue20),
+    LANGUAGE(R.string.language, R.drawable.ic_about, Violet20),
+    LOGOUT(R.string.logout, R.drawable.ic_logout, Red20);
 }
 
 enum class AboutOptions(

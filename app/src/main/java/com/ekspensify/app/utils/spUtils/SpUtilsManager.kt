@@ -58,6 +58,13 @@ class SpUtilsManager @Inject constructor(
         spUtils.accountData = accountData
     }
 
+    private val _languagePreference = MutableStateFlow(spUtils.languagePreference)
+    val languagePreference: StateFlow<String> get() = _languagePreference
+    fun updateLanguagePreference(language: String) {
+        _languagePreference.value = language
+        spUtils.languagePreference = language
+    }
+
     private val _categoriesData = MutableStateFlow(spUtils.categoriesData)
     val categoriesData: StateFlow<CategoryListModel?> get() = _categoriesData
     fun updateCategoriesData(categoriesData: CategoryListModel?) {

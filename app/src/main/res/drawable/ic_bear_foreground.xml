@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple bear head icon (stylized) -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M54,12c-11,0-20,9-20,20s9,20,20,20,20-9,20-20S65,12,54,12z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M28,36c0-6,6-10,12-8,2,0,4,2,4,4,0,2-2,4-4,4-6,2-12,0-12,0z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M80,36c0-6-6-10-12-8-2,0-4,2-4,4,0,2,2,4,4,4,6,2,12,0,12,0z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M46,46c-2,0-4,2-4,4s2,4,4,4,4-2,4-4S48,46,46,46z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M62,46c-2,0-4,2-4,4s2,4,4,4,4-2,4-4S64,46,62,46z"/>
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M50,60c4,4,8,4,12,0"/>
+</vector>

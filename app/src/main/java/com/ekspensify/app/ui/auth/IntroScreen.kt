@@ -136,25 +136,41 @@ fun PageView(introPages: IntroPages, modifier: Modifier) {
                 .padding(horizontal = 40.dp)
         )
         Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            introPages.title,
-            textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.titleLarge.copy(
-                fontSize = 30.sp,
-                color = MaterialTheme.colorScheme.onBackground
-            ),
-        )
-        Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            text = introPages.description,
-            style = MaterialTheme.typography.bodyLarge.copy(
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            ),
-            minLines = 2,
-            maxLines = 2,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.padding(horizontal = 15.dp)
-        )
+
+        // Modernized: add a subtle surface/card behind texts for emphasis
+        androidx.compose.material3.Surface(
+            tonalElevation = 2.dp,
+            shape = androidx.compose.material3.MaterialTheme.shapes.medium,
+            color = MaterialTheme.colorScheme.surfaceVariant,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 24.dp)
+        ) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.padding(vertical = 20.dp, horizontal = 16.dp)
+            ) {
+                Text(
+                    text = stringResource(introPages.titleRes),
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontSize = 26.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    ),
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = stringResource(introPages.descriptionRes),
+                    style = MaterialTheme.typography.bodyMedium.copy(
+                        color = MaterialTheme.colorScheme.onSurface
+                    ),
+                    minLines = 2,
+                    maxLines = 3,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(horizontal = 8.dp)
+                )
+            }
+        }
     }
 
 }

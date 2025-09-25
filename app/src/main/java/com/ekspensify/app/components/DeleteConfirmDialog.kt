@@ -12,6 +12,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+// R import provided above
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -45,7 +47,7 @@ fun DeleteConfirmDialog(
                 modifier = Modifier.size(80.dp)
             )
             Text(
-                "Are you Absolutely sure?",
+                text = stringResource(R.string.are_you_absolutely_sure),
                 style = MaterialTheme.typography.bodyMedium.copy(
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp
@@ -60,8 +62,8 @@ fun DeleteConfirmDialog(
                     Alignment.CenterHorizontally
                 )
             ) {
-                FilledButton(
-                    text = "Cancel",
+            FilledButton(
+                text = stringResource(R.string.cancel),
                     onClick = singleClick { onCancel() },
                     modifier = Modifier.weight(1f),
                     textModifier = Modifier.padding(vertical = 17.dp),
@@ -71,7 +73,7 @@ fun DeleteConfirmDialog(
                     )
                 )
                 FilledButton(
-                    text = "Delete",
+                    text = stringResource(R.string.delete),
                     onClick = singleClick { onDelete() },
                     textModifier = Modifier.padding(vertical = 17.dp),
                     colors = ButtonDefaults.buttonColors(

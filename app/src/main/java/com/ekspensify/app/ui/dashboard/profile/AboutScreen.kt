@@ -16,6 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import androidx.compose.ui.res.stringResource
 import com.ekspensify.app.BuildConfig
 import com.ekspensify.app.R
 import com.ekspensify.app.components.AppBar
@@ -35,9 +36,9 @@ fun AboutScreen(
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            AppBar(
-                heading = "About", navController
-            )
+                AppBar(
+                    heading = stringResource(R.string.about), navController
+                )
         }) { paddingValues ->
         Column(
             modifier = Modifier
@@ -62,7 +63,7 @@ fun AboutScreen(
             }
 
             Text(
-                "Version : ${BuildConfig.VERSION_NAME}",
+                text = stringResource(R.string.version_format, BuildConfig.VERSION_NAME),
                 style = MaterialTheme.typography.bodyMedium.copy(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 ),

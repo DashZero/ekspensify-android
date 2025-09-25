@@ -17,15 +17,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
+import com.ekspensify.app.R
 import androidx.compose.ui.window.Dialog
 import com.ekspensify.app.ui.theme.Red80
 
 
 @Composable
 fun AlertDialog(
-    title: String = "Are you sure",
+    title: String = stringResource(id = R.string.are_you_sure),
     message: String = "",
-    btnText : String = "Delete",
+    btnText : String = stringResource(id = R.string.delete),
     onDismiss: () -> Unit = {},
     onConfirm: () -> Unit = {}
 ) {
@@ -65,7 +67,7 @@ fun AlertDialog(
                         .padding(horizontal = 8.dp)
 
                     Text(
-                        text = "Cancel",
+                        text = stringResource(id = R.string.cancel),
                         style = MaterialTheme.typography.bodyMedium,
                         modifier = buttonModifier
                             .clip(RoundedCornerShape(5.dp))
