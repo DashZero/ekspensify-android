@@ -37,6 +37,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
@@ -110,7 +111,7 @@ fun TransactionDetailsDialog(
                 transaction?.attachment?.let {
                     AsyncImage(
                         model = it,
-                        contentDescription = null,
+                        contentDescription = stringResource(R.string.cd_transaction_attachment),
                         modifier = Modifier
                             .weight(1f)
                             .clip(RoundedCornerShape(16.dp))
@@ -275,7 +276,7 @@ private fun AttachmentPreview(attachment: String?, onClick: () -> Unit) {
         title = attachment?.substringAfterLast("/").orEmpty(),
         trailingContent = {
             Text(
-                "View", style = MaterialTheme.typography.labelLarge.copy(
+                stringResource(R.string.view), style = MaterialTheme.typography.labelLarge.copy(
                     color = MaterialTheme.colorScheme.primary
                 )
             )
@@ -326,7 +327,7 @@ fun FlowRowScope.EditDeleteBtn(
             .size(30.dp)
             .weight(1f)
         Icon(painterResource(R.drawable.ic_edit),
-            contentDescription = "",
+            contentDescription = stringResource(R.string.cd_edit_icon),
             tint = iconColor,
             modifier = iconModifier.clickable { onEditClick() })
         VerticalDivider(
@@ -334,7 +335,7 @@ fun FlowRowScope.EditDeleteBtn(
             color = MaterialTheme.extendedColors.primaryBorder,
         )
         Icon(painterResource(R.drawable.ic_delete),
-            contentDescription = "",
+            contentDescription = stringResource(R.string.cd_delete),
             tint = Red75,
             modifier = iconModifier.clickable { onDeleteClick() })
     }
@@ -358,14 +359,14 @@ private fun FlowRowScope.CloseBtn(
     ) {
         Icon(
             painterResource(R.drawable.ic_close),
-            contentDescription = "",
+            contentDescription = stringResource(R.string.cd_close),
             tint = iconColor,
             modifier = Modifier
                 .padding(vertical = 18.dp)
                 .size(18.dp)
         )
         Text(
-            "Close", style = MaterialTheme.typography.bodyMedium.copy(
+            stringResource(R.string.close), style = MaterialTheme.typography.bodyMedium.copy(
                 color = iconColor, fontSize = 18.sp
             )
         )

@@ -78,6 +78,11 @@ This document outlines the proposed AI features, data contracts, privacy checkli
 - Create `AiApi` interfaces and local mock server for POC.
 - Write unit tests for Quick-Add parser and Categorization suggestions.
 
+Batch4 localization (progress)
+
+- Converted additional UI contentDescriptions and visible labels to use string resources and added Thai placeholders for the newly introduced keys. Files changed: `ProfileAvatar.kt`, `BudgetFilterRow.kt`, `BudgetOptionsMenu.kt`, `TotalBalanceCard.kt`, `PicturePreviewScreen.kt`, `TransactionDetailsDialog.kt`.
+- Added English and Thai entries for new resource keys referenced by Batch4.
+
 Contact / Notes
 
 - This spec is a living document. Update as we prototype and identify constraints (cost, privacy, accuracy).

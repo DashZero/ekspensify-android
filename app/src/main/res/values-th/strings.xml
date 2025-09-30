@@ -54,4 +54,19 @@
     <string name="cd_calendar">ไอคอนปฏิทิน</string>
     <string name="cd_confirm">ยืนยัน</string>
 
+    <!-- Batch4 localization keys (Thai placeholders) -->
+    <string name="cd_edit_icon">แก้ไข</string>
+    <string name="cd_create_budget">สร้างงบประมาณ</string>
+    <string name="create">สร้าง</string>
+    <string name="cd_more_menu">ตัวเลือกเพิ่มเติม</string>
+    <string name="cd_open_details">เปิดรายละเอียด</string>
+    <string name="income">รายได้</string>
+    <string name="expense">ค่าใช้จ่าย</string>
+    <string name="cd_picture_preview_image">ตัวอย่างรูปภาพ</string>
+    <string name="cd_download_image">ดาวน์โหลดรูปภาพ</string>
+    <string name="cd_transaction_attachment">ไฟล์แนบ</string>
+    <string name="cd_delete">ลบ</string>
+    <string name="cd_close">ปิด</string>
+    <string name="view">ดู</string>
+
 </resources>

@@ -75,6 +75,12 @@ I wanted a **clean, intuitive, and fun way** to track income and expenses. No mo
 - ☁ **Cloud Storage:** Your transaction records are securely stored on the server, keeping them safe and accessible.
 - 📄 **PDF & CSV Export**: Easily export transaction data for reporting and record-keeping.
 
+Recent localization work (Batch4)
+
+- Converted additional UI contentDescriptions and labels to use Android string resources and added Thai placeholders. Files updated in Batch4 include: `ProfileAvatar.kt`, `BudgetFilterRow.kt`, `BudgetOptionsMenu.kt`, `TotalBalanceCard.kt`, `PicturePreviewScreen.kt`, `TransactionDetailsDialog.kt`.
+- Added English + Thai string entries for new keys introduced in Batch4 (e.g., `cd_edit_icon`, `cd_create_budget`, `income`, `expense`, `cd_picture_preview_image`, etc.).
+ 
+
 ## **🎉 Download the App**
 
 You can get the latest version of the app from the Google Play Store:

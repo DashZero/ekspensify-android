@@ -26,6 +26,8 @@ import com.ekspensify.app.data.model.BudgetMeta
 import com.ekspensify.app.ui.theme.Violet40
 import com.ekspensify.app.utils.BudgetStatus
 import com.ekspensify.app.utils.roundedBorder
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.painterResource
 
 @Composable
 fun BudgetFilterRow(
@@ -110,12 +112,12 @@ private fun RowScope.CreateBudgetBtn(
             .padding(vertical = 10.dp, horizontal = 16.dp)
     ) {
         Icon(
-            rememberAsyncImagePainter(R.drawable.ic_create_budget),
-            contentDescription = "CreateBudget",
+            painter = painterResource(id = R.drawable.ic_create_budget),
+            contentDescription = stringResource(R.string.cd_create_budget),
             tint = Violet40,
         )
         Text(
-            "Create",
+            stringResource(R.string.create),
             style = MaterialTheme.typography.labelSmall.copy(
                 color = Violet40
             )

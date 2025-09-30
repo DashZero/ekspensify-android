@@ -75,7 +75,7 @@ fun HeaderRow(onClick: () -> Unit) {
         )
         Icon(
             rememberAsyncImagePainter(R.drawable.ic_arrow_right_long),
-            contentDescription = "",
+            contentDescription = stringResource(R.string.cd_open_details),
             modifier = Modifier.clickable(onClick = onClick)
         )
     }
@@ -96,14 +96,14 @@ fun BalanceDetailsRow(income: String, expense: String) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         BalanceColumn(
-            label = "Income",
+            label = stringResource(R.string.income),
             amount = income,
             iconResId = R.drawable.ic_income_arrow,
             alignment = Alignment.Start
         )
         VerticalDivider(thickness = 0.5.dp)
         BalanceColumn(
-            label = "Expense",
+            label = stringResource(R.string.expense),
             amount = expense,
             iconResId = R.drawable.ic_expense_arrow,
             alignment = Alignment.End

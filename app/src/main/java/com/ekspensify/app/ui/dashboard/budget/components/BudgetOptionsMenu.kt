@@ -77,7 +77,7 @@ private fun BudgetDeleteBtn(onClick: () -> Unit) {
     ) {
         Icon(
             rememberAsyncImagePainter(R.drawable.ic_menu_more),
-            contentDescription = "Delete",
+            contentDescription = stringResource(R.string.cd_more_menu),
             tint = MaterialTheme.extendedColors.iconColor,
             modifier = Modifier
                 .size(24.dp)

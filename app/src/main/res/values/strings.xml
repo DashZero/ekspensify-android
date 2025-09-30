@@ -171,4 +171,18 @@
     <string name="cd_settings">Theme settings</string>
     <string name="cd_calendar">Calendar Icon</string>
     <string name="cd_confirm">Confirm</string>
+    <!-- Batch4 localization keys -->
+    <string name="cd_edit_icon">Edit</string>
+    <string name="cd_create_budget">Create budget</string>
+    <string name="create">Create</string>
+    <string name="cd_more_menu">More options</string>
+    <string name="cd_open_details">Open details</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="cd_picture_preview_image">Picture preview</string>
+    <string name="cd_download_image">Download image</string>
+    <string name="cd_transaction_attachment">Attachment</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_close">Close</string>
+    <string name="view">View</string>
 </resources>
