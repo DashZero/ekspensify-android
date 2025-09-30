@@ -3,7 +3,7 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    kotlin("plugin.serialization") version "2.0.20"
+    kotlin("plugin.serialization") version "1.9.25"
 
     id("kotlin-parcelize")
 
@@ -21,7 +21,7 @@ plugins {
 
 
 android {
-    namespace = "com.ekspensify.app"
+    namespace = "com.honeypot.app"
     compileSdk = 35
 
     val properties = Properties()
@@ -33,7 +33,7 @@ android {
         logger.warn("local.properties not found at ${localPropertiesFile.absolutePath}. Using placeholder defaults for local development.")
     }
     defaultConfig {
-        applicationId = "com.ekspensify.app"
+        applicationId = "com.honeypot.app"
         minSdk = 25
         targetSdk = 35
         versionCode = 6
@@ -49,9 +49,9 @@ android {
         buildConfigField("String", "CLIENT_ID", properties.getProperty("CLIENT_ID")?.let { "\"$it\"" } ?: "\"local_client_id_placeholder\"")
         buildConfigField("String", "ONESIGNAL_APP_ID", properties.getProperty("ONESIGNAL_APP_ID")?.let { "\"$it\"" } ?: "\"onesignal_local_placeholder\"")
     // Azure OpenAI config (optional: set in local.properties)
-    buildConfigField("String", "AZURE_OPENAI_ENDPOINT", properties.getProperty("AZURE_OPENAI_ENDPOINT")?.let { "\"$it\"" } ?: "\"https://afaihub.cognitiveservices.azure.com/\"")
-    buildConfigField("String", "AZURE_OPENAI_DEPLOYMENT", properties.getProperty("AZURE_OPENAI_DEPLOYMENT")?.let { "\"$it\"" } ?: "\"gpt-5-mini\"")
-    buildConfigField("String", "AZURE_OPENAI_KEY", properties.getProperty("AZURE_OPENAI_KEY")?.let { "\"$it\"" } ?: "\"\"")
+    buildConfigField("String", "AZURE_OPENAI_ENDPOINT", properties.getProperty("AZURE_OPENAI_ENDPOINT")?.trim()?.let { "\"${it}\"" } ?: "\"https://afaihub.cognitiveservices.azure.com/\"")
+    buildConfigField("String", "AZURE_OPENAI_DEPLOYMENT", properties.getProperty("AZURE_OPENAI_DEPLOYMENT")?.trim()?.let { "\"${it}\"" } ?: "\"gpt-5-mini\"")
+    buildConfigField("String", "AZURE_OPENAI_KEY", properties.getProperty("AZURE_OPENAI_KEY")?.trim()?.let { "\"${it}\"" } ?: "\"\"")
     }
 
     signingConfigs {
@@ -102,19 +102,19 @@ android {
     }
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packaging {
         resources {
@@ -122,12 +122,10 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
+}
 
-
+kotlin {
+    jvmToolchain(17)
 }
 // Allow references to generated code
 kapt {

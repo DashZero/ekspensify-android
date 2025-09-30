@@ -1,4 +1,4 @@
-# 🎉 Ekspensify - Your Personal Finance Buddy!
+# 🎉 HoneyPot - Your Personal Finance Buddy!
 
 ![Android](https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
@@ -9,17 +9,17 @@
 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![Google Play](https://img.shields.io/endpoint?color=green&logo=google-play&url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.ekspensify.app%26l%3DGoogle%2520Play%26m%3Dv%24version)](https://play.google.com/store/apps/details?id=com.ekspensify.app)
-[![Google Play](https://img.shields.io/endpoint?color=green&logo=google-play&url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.ekspensify.app%26l%3Ddownloads%26m%3D%24totalinstalls)](https://play.google.com/store/apps/details?id=com.ekspensify.app)
-[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/dilipsuthar264/ekspensify/total?logo=github)](https://github.com/dilipsuthar264/ekspensify/releases/latest)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/dilipsuthar264/ekspensify?logo=github&label=GitHub&cacheSeconds=3600)](https://github.com/dilipsuthar264/ekspensify/releases/latest)
-![GitHub repo size](https://img.shields.io/github/repo-size/dilipsuthar264/ekspensify.svg?logo=github)
+[![Google Play](https://img.shields.io/endpoint?color=green&logo=google-play&url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.honeypot.app%26l%3DGoogle%2520Play%26m%3Dv%24version)](https://play.google.com/store/apps/details?id=com.honeypot.app)
+[![Google Play](https://img.shields.io/endpoint?color=green&logo=google-play&url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.honeypot.app%26l%3Ddownloads%26m%3D%24totalinstalls)](https://play.google.com/store/apps/details?id=com.honeypot.app)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/honeypot/honeypot/total?logo=github)](https://github.com/honeypot/honeypot/releases/latest)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/honeypot/honeypot?logo=github&label=GitHub&cacheSeconds=3600)](https://github.com/honeypot/honeypot/releases/latest)
+![GitHub repo size](https://img.shields.io/github/repo-size/honeypot/honeypot.svg?logo=github)
 
 
 
 ## **🚀 Overview**
 
-Welcome to **Ekspensify**, your personal finance tracking app made with **Kotlin** and **Jetpack Compose**! This project is all about making financial management simple, fun, and stress-free. Whether you’re budgeting like a pro or just starting, **Ekspensify** helps you stay on top of your money! 💰✨
+Welcome to **HoneyPot**, your personal finance tracking app made with **Kotlin** and **Jetpack Compose**! This project is all about making financial management simple, fun, and stress-free. Whether you’re budgeting like a pro or just starting, **HoneyPot** helps you stay on top of your money! 💰✨
 
 ### **✨ Why I Built This**
 
@@ -42,7 +42,7 @@ I wanted a **clean, intuitive, and fun way** to track income and expenses. No mo
 
 You can get the latest version of the app from the Google Play Store:
 
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80"/>](https://play.google.com/store/apps/details?id=com.ekspensify.app)
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80"/>](https://play.google.com/store/apps/details?id=com.honeypot.app)
 
 
 ## **🛠 Tech Stack**
@@ -60,9 +60,9 @@ You can get the latest version of the app from the Google Play Store:
 - **Paging3** – For efficient paginated data retrieval and display in the UI.
 
 ## **📸 Screenshots**
-<img src="https://ekspensify-aws-bucket.s3.ap-south-1.amazonaws.com/Feature+graphic-1.png" alt="preview"/>
+<img src="https://honeypot-assets.s3.ap-south-1.amazonaws.com/feature-graphic-1.png" alt="preview"/>
 <br>  
-<img src="https://ekspensify-aws-bucket.s3.ap-south-1.amazonaws.com/Feature+graphic.png" alt="preview"/>
+<img src="https://honeypot-assets.s3.ap-south-1.amazonaws.com/feature-graphic.png" alt="preview"/>
 
 ## **🔧 Installation & Setup**
 
@@ -73,7 +73,7 @@ This is a complete Android app that interacts with a backend server. While you c
 - Clone the repository:
 
     ```bash
-    git clone https://github.com/memeusix/Ekspensify.git
+    git clone https://github.com/honeypot/honeypot.git
     ```
 
 - Open the project in **Android Studio**.
@@ -90,11 +90,11 @@ This is a complete Android app that interacts with a backend server. While you c
 
 ### 🔧 Backend
 You can find the backend code here:  
-➡️ [Backend Repository | ekspensify-backend](https://github.com/gokulsuthar22/ekspensify-backend)
+➡️ [Backend Repository | honeypot-backend](https://github.com/honeypot/honeypot-backend)
 
 ### 🌐 Website
 You can find the landing web page code here:  
-➡️ [Website Repository | ekspensify-web](https://github.com/vipulsuthar1144/ekspensify-web)
+➡️ [Website Repository | honeypot-web](https://github.com/honeypot/honeypot-web)
 
 
 ## **🤝 Contributing**
@@ -105,5 +105,5 @@ Love this project? Want to make it even better? Feel free to **open issues, subm
 
 Got feedback or ideas? Reach out to me! I’d love to hear from you. 🎉
 
-- 📧 Email: team@ekspensify.in
+- 📧 Email: team@honeypot.app
 - 💼 LinkedIn:  [Dilip Kumar | LinkedIn](https://www.linkedin.com/in/dilipkumar264/)
