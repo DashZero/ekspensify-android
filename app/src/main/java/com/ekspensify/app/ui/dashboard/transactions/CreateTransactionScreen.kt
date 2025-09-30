@@ -168,7 +168,7 @@ fun CreateTransactionScreen(
         contentColor = MaterialTheme.colorScheme.onPrimary,
         topBar = {
             AppBar(
-                heading = "Add Transaction",
+                heading = stringResource(R.string.add_transaction),
                 navController = navController,
                 isLightColor = true,
                 bgColor = bgColor

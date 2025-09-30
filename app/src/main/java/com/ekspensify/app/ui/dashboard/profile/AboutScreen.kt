@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -36,7 +37,7 @@ fun AboutScreen(
         modifier = Modifier.fillMaxSize(),
         topBar = {
             AppBar(
-                heading = "About", navController
+                heading = stringResource(R.string.about), navController
             )
         }) { paddingValues ->
         Column(
@@ -47,7 +48,7 @@ fun AboutScreen(
         ) {
             CreateBudgetSectionCard("") {
                 AboutOptions.entries.forEach {
-                    CustomListItem(title = it.title,
+                    CustomListItem(title = stringResource(it.titleRes),
                         modifier = Modifier.padding(vertical = 9.dp),
                         trailingContent = {
                             Icon(

@@ -25,7 +25,13 @@ android {
     compileSdk = 35
 
     val properties = Properties()
-    properties.load(project.rootProject.file("local.properties").inputStream())
+    val localPropertiesFile = project.rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        properties.load(localPropertiesFile.inputStream())
+    } else {
+        // Local properties missing — provide empty defaults so Gradle configuration doesn't fail.
+        logger.warn("local.properties not found at ${localPropertiesFile.absolutePath}. Using placeholder defaults for local development.")
+    }
     defaultConfig {
         applicationId = "com.ekspensify.app"
         minSdk = 25
@@ -39,16 +45,27 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField("String", "CLIENT_ID", properties.getProperty("CLIENT_ID"))
-        buildConfigField("String", "ONESIGNAL_APP_ID", properties.getProperty("ONESIGNAL_APP_ID"))
+        // Use safe quoted defaults to avoid nulls at configuration time. These are placeholders only.
+        buildConfigField("String", "CLIENT_ID", properties.getProperty("CLIENT_ID")?.let { "\"$it\"" } ?: "\"local_client_id_placeholder\"")
+        buildConfigField("String", "ONESIGNAL_APP_ID", properties.getProperty("ONESIGNAL_APP_ID")?.let { "\"$it\"" } ?: "\"onesignal_local_placeholder\"")
+    // Azure OpenAI config (optional: set in local.properties)
+    buildConfigField("String", "AZURE_OPENAI_ENDPOINT", properties.getProperty("AZURE_OPENAI_ENDPOINT")?.let { "\"$it\"" } ?: "\"https://afaihub.cognitiveservices.azure.com/\"")
+    buildConfigField("String", "AZURE_OPENAI_DEPLOYMENT", properties.getProperty("AZURE_OPENAI_DEPLOYMENT")?.let { "\"$it\"" } ?: "\"gpt-5-mini\"")
+    buildConfigField("String", "AZURE_OPENAI_KEY", properties.getProperty("AZURE_OPENAI_KEY")?.let { "\"$it\"" } ?: "\"\"")
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file(properties.getProperty("RELEASE_STORE_FILE"))
-            storePassword = properties.getProperty("RELEASE_STORE_PASSWORD")
-            keyAlias = properties.getProperty("RELEASE_KEY_ALIAS")
-            keyPassword = properties.getProperty("RELEASE_KEY_PASSWORD")
+            // Signing properties are optional for local builds. Use placeholders when missing.
+            val storeFilePath = properties.getProperty("RELEASE_STORE_FILE")
+            if (!storeFilePath.isNullOrBlank()) {
+                storeFile = file(storeFilePath)
+            } else {
+                logger.warn("RELEASE_STORE_FILE not set in local.properties — release signing disabled for local builds.")
+            }
+            storePassword = properties.getProperty("RELEASE_STORE_PASSWORD") ?: ""
+            keyAlias = properties.getProperty("RELEASE_KEY_ALIAS") ?: ""
+            keyPassword = properties.getProperty("RELEASE_KEY_PASSWORD") ?: ""
         }
     }
 
@@ -57,11 +74,11 @@ android {
     productFlavors {
         create("server") {
             dimension = "base_url"
-            buildConfigField("String", "BASE_URL", properties.getProperty("SERVER_HOST_API"))
+            buildConfigField("String", "BASE_URL", properties.getProperty("SERVER_HOST_API")?.let { "\"$it\"" } ?: "\"https://api.example.com/\"")
         }
         create("local") {
             dimension = "base_url"
-            buildConfigField("String", "BASE_URL", properties.getProperty("LOCAL_HOST_API"))
+            buildConfigField("String", "BASE_URL", properties.getProperty("LOCAL_HOST_API")?.let { "\"$it\"" } ?: "\"http://10.0.2.2:3000/\"")
         }
     }
 

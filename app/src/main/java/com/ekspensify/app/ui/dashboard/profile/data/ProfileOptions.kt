@@ -1,6 +1,7 @@
 package com.ekspensify.app.ui.dashboard.profile.data
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
 import com.ekspensify.app.R
 import com.ekspensify.app.ui.theme.Blue20
@@ -11,26 +12,26 @@ import com.ekspensify.app.ui.theme.Yellow20
 
 
 enum class ProfileOptions(
-    val title: String,
+    @StringRes val titleRes: Int,
     @DrawableRes val icon: Int,
     val iconColor: Color = Violet20
 ) {
-    ACCOUNT("Accounts", R.drawable.ic_wallet, Violet20),
-    CATEGORY("Categories", R.drawable.ic_category, Yellow20),
-    AUTO_TRACKING("Auto Tracking", R.drawable.ic_autotracking),
-    EXPORT("Export", R.drawable.ic_exoprt, Green20),
-    ABOUT("About", R.drawable.ic_about, Blue20),
-    LOGOUT("Logout", R.drawable.ic_logout, Red20);
+    ACCOUNT(R.string.accounts, R.drawable.ic_wallet, Violet20),
+    CATEGORY(R.string.categories, R.drawable.ic_category, Yellow20),
+    AUTO_TRACKING(R.string.auto_tracking, R.drawable.ic_autotracking),
+    EXPORT(R.string.export, R.drawable.ic_exoprt, Green20),
+    ABOUT(R.string.about, R.drawable.ic_about, Blue20),
+    LOGOUT(R.string.logout, R.drawable.ic_logout, Red20);
 }
 
 enum class AboutOptions(
-    val title: String,
+    @StringRes val titleRes: Int,
 ) {
-    WEBSITE("Website"),
-    PRIVACY_POLICY("Privacy Policy"),
-    TERMS_AND_CONDITION("Terms and Condition"),
-    SEND_FEEDBACK("Send Feedback"),
-    CONTACT_US("Contact Us")
+    WEBSITE(R.string.website),
+    PRIVACY_POLICY(R.string.privacy_policy),
+    TERMS_AND_CONDITION(R.string.terms_of_service),
+    SEND_FEEDBACK(R.string.ekspensify_feedback),
+    CONTACT_US(R.string.contact_us)
 }
 
 

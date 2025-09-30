@@ -234,7 +234,7 @@ private fun ColumnScope.UserInfo(
 @Composable
 private fun ProfileListItem(profileOptions: ProfileOptions, onClick: () -> Unit) {
     CustomListItem(
-        title = profileOptions.title,
+        title = stringResource(profileOptions.titleRes),
         leadingContent = {
             ListIcon(profileOptions.icon)
         },

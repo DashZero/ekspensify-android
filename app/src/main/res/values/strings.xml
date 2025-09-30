@@ -42,6 +42,7 @@
     <string name="i_understand_delete_this_account">I understand, Delete this account</string>
     <string name="are_you_absolutely_sure">Are you absolutely sure?</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="about">About</string>
     <string name="general">General</string>
     <string name="danger">Danger</string>
     <string name="create_category">Create Category</string>
@@ -132,4 +133,18 @@
     <string name="support_request_ekspensify">Support Request - Ekspensify</string>
     <string name="select_start_date">Select Start Date</string>
     <string name="select_end_date">Select End Date</string>
+    <!-- Intro pages -->
+    <string name="intro_title_1">Ekspensify</string>
+    <string name="intro_desc_1">Tracking money made easy, so you can stress less and enjoy more!</string>
+    <string name="intro_title_2">Auto Tracking</string>
+    <string name="intro_desc_2">Automatically track and categorize your expenses in real-time.</string>
+    <string name="intro_title_3">Set Budgets</string>
+    <string name="intro_desc_3">Set budgets, control expenses, and save smarter.</string>
+    <string name="website">Website</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="empty_image_desc">Empty illustration</string>
+    <string name="add_transaction">Add Transaction</string>
 </resources>

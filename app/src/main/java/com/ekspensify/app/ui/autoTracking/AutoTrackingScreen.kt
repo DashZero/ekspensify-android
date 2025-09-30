@@ -106,7 +106,7 @@ fun AutoTrackingScreen(
         modifier = Modifier.fillMaxSize(),
         topBar = {
             AppBar(
-                heading = "Auto Tracking",
+                heading = stringResource(R.string.auto_tracking),
                 navController
             )
         }

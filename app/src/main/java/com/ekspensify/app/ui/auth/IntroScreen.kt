@@ -137,7 +137,7 @@ fun PageView(introPages: IntroPages, modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(20.dp))
         Text(
-            introPages.title,
+            text = stringResource(introPages.titleRes),
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.titleLarge.copy(
                 fontSize = 30.sp,
@@ -146,7 +146,7 @@ fun PageView(introPages: IntroPages, modifier: Modifier) {
         )
         Spacer(modifier = Modifier.height(20.dp))
         Text(
-            text = introPages.description,
+            text = stringResource(introPages.descriptionRes),
             style = MaterialTheme.typography.bodyLarge.copy(
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             ),

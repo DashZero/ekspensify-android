@@ -145,4 +145,10 @@ class AppModule {
     fun provideExportApi(app: Application): ExportApi {
         return getRetrofit(app).create(ExportApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideAzureOpenAIRepository(): com.ekspensify.app.ai.AzureOpenAIRepository {
+        return com.ekspensify.app.ai.AzureOpenAIRepository()
+    }
 }

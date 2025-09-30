@@ -20,6 +20,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.compose.ui.res.stringResource
+import com.ekspensify.app.R
 import com.commandiron.wheel_picker_compose.WheelDatePicker
 import com.commandiron.wheel_picker_compose.core.WheelPickerDefaults
 import com.ekspensify.app.utils.SetWindowDim
@@ -70,7 +72,7 @@ fun CustomDatePicker(
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 FilledButton(
-                    text = "Cancel",
+                    text = stringResource(R.string.cancel),
                     modifier = Modifier.weight(1f),
                     textStyle = MaterialTheme.typography.bodyMedium,
                     colors = ButtonDefaults.buttonColors(
@@ -80,7 +82,7 @@ fun CustomDatePicker(
                     onClick = onDismiss
                 )
                 FilledButton(
-                    text = "Set Date",
+                    text = stringResource(R.string.set_month),
                     textStyle = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(1f),
                     onClick = {
