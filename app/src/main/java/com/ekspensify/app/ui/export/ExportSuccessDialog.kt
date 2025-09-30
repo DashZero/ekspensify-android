@@ -131,7 +131,7 @@ private fun BulletPoint(
         Modifier.fillMaxWidth()
     ) {
         Text(
-            text = "•",
+            text = stringResource(R.string.bullet),
             style = MaterialTheme.typography.bodySmall,
             modifier = Modifier.padding(end = 8.dp)
         )

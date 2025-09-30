@@ -1,4 +1,4 @@
-# Ekspensify (Fork) — Android
+# HoneyPot (Fork) — Android
 
 This repository is a forked and adapted Android expense tracker app (Jetpack Compose + Kotlin) targeted for Thailand-friendly localization and future AI features.
 
@@ -56,7 +56,7 @@ License
 
 ## **🚀 Overview**
 
-Welcome to **Ekspensify**, your personal finance tracking app made with **Kotlin** and **Jetpack Compose**! This project is all about making financial management simple, fun, and stress-free. Whether you’re budgeting like a pro or just starting, **Ekspensify** helps you stay on top of your money! 💰✨
+Welcome to **HoneyPot**, your personal finance tracking app made with **Kotlin** and **Jetpack Compose**! This project is all about making financial management simple, fun, and stress-free. Whether you’re budgeting like a pro or just starting, **HoneyPot** helps you stay on top of your money! 💰✨
 
 ### **✨ Why I Built This**
 

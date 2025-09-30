@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -34,9 +35,9 @@ fun EmptyView(
         verticalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterVertically)
     ) {
         image?.let {
-            Image(
-                painter = rememberAsyncImagePainter(image),
-                contentDescription = "empty",
+        Image(
+            painter = rememberAsyncImagePainter(image),
+            contentDescription = stringResource(id = R.string.empty_image_desc),
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .fillMaxWidth(0.5f)

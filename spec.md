@@ -1,4 +1,4 @@
-# AI & Localization Spec — Ekspensify (New-AI-Finance)
+# AI & Localization Spec — HoneyPot (New-AI-Finance)
 
 This document outlines the proposed AI features, data contracts, privacy checklist, and an implementation roadmap for adding AI-powered capabilities and completing Thai localization.
 

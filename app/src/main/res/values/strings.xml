@@ -31,7 +31,7 @@
     <string name="sign_up_with_google">Sign Up with Google</string>
     <string name="please_check_terms_and_conditions">Please check terms and conditions</string>
     <string name="otp_sent_successfully">Otp Sent Successfully</string>
-    <string name="no_account_message">To track your expenses, create your wallet and add your balance manually. Don’t worry—no bank details required. You’re in control of your spending!</string>
+    <string name="no_account_message">Create a wallet and add your balance to start tracking expenses. No bank details needed.</string>
     <string name="set_up_your_wallet_to_get_started">Set up your Wallet to Get Started</string>
     <string name="accounts">Accounts</string>
     <string name="add_new_wallet">+ Add new Wallet</string>
@@ -93,7 +93,7 @@
     <string name="select_month">Select Month</string>
     <string name="export_transaction_statement">Export Transaction Statement</string>
     <string name="your_transaction_statement_will_be_sent_to_your_verified_email_address">Your transaction statement will be sent to your verified email address:</string>
-    <string name="for_security_reasons_the_statement_can_only_be_sent_to_this_email_if_you_need_to_update_it_please_do_so_in_your_account_settings">For security reasons, the statement can only be sent to this email. If you need to update it, please do so in your account settings.</string>
+    <string name="for_security_reasons_the_statement_can_only_be_sent_to_this_email_if_you_need_to_update_it_please_do_so_in_your_account_settings">For security, statements are sent only to this email. Update it in account settings if needed.</string>
     <string name="for_security_reasons_the_statement_can_only_be_sent_to_this_email">For security reasons, the statement can only be sent to this email.</string>
     <string name="send_request">Send Request</string>
     <string name="got_it">Got It</string>
@@ -104,7 +104,7 @@
     <string name="no_otps_or_personal_messages_accessed">No OTPs or personal messages\naccessed</string>
     <string name="data_stays_on_your_device_no_servers_involved">Data stays on your device,\nno servers involved</string>
     <string name="auto_tracking">Auto Tracking</string>
-    <string name="track_your_expenses_automatically_with_sms_notifications_secure_private_and_effortless">Track your expenses and Income automatically with SMS notifications - secure, private, and effortless</string>
+    <string name="track_your_expenses_automatically_with_sms_notifications_secure_private_and_effortless">Automatically track income and expenses from SMS — secure and private.</string>
     <string name="disable">Disable</string>
     <string name="enable">Enable</string>
     <string name="safe_and_secure">Safe and Secure</string>
@@ -130,8 +130,8 @@
     <string name="by_signing_up_you_agree_to_the">"By signing up, you agree to the "</string>
     <string name="swipe_to_enable">Swipe to Enable</string>
     <string name="safe_secure"><![CDATA[Safe & Secure]]></string>
-    <string name="ekspensify_feedback">Ekspensify(%1$s) Feedback</string>
-    <string name="support_request_ekspensify">Support Request - Ekspensify</string>
+    <string name="ekspensify_feedback">HoneyPot(%1$s) Feedback</string>
+    <string name="support_request_ekspensify">Support Request - HoneyPot</string>
     <string name="select_start_date">Select Start Date</string>
     <string name="select_end_date">Select End Date</string>
     <!-- Onboarding strings -->
@@ -160,4 +160,15 @@
     <string name="no_otps">No OTPs</string>
     <string name="no_personal_sms">No Personal SMS</string>
     <string name="fully_local">Fully Local</string>
+    <string name="bullet">•</string>
+    <string name="sms_icon_desc">SMS icon</string>
+    <string name="empty_image_desc">Empty list illustration</string>
+    <string name="no_account_image_desc">No account illustration</string>
+    <!-- content descriptions for accessibility -->
+    <string name="cd_back">Back</string>
+    <string name="cd_camera">Camera</string>
+    <string name="cd_gallery">Gallery</string>
+    <string name="cd_settings">Theme settings</string>
+    <string name="cd_calendar">Calendar Icon</string>
+    <string name="cd_confirm">Confirm</string>
 </resources>

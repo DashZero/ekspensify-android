@@ -34,7 +34,7 @@ fun EmptyAccountsView(
     ) {
         Image(
             painter = painterResource(R.drawable.ic_no_account),
-            contentDescription = null,
+            contentDescription = stringResource(id = R.string.no_account_image_desc),
             modifier = Modifier
                 .fillMaxWidth(0.8f),
             contentScale = ContentScale.Fit

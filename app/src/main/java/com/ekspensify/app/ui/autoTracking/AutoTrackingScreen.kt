@@ -48,6 +48,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -312,7 +313,7 @@ private fun DraggableControl(
     )
     Icon(
         painterResource(R.drawable.ic_double_arrow_right),
-        contentDescription = "Confirm Icon",
+        contentDescription = stringResource(R.string.cd_confirm),
         tint = Light100,
         modifier =
         modifier

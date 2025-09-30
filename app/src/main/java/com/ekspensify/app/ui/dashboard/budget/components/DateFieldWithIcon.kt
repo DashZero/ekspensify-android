@@ -22,6 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
 import coil.compose.rememberAsyncImagePainter
 import com.ekspensify.app.R
 import com.ekspensify.app.utils.CustomCornerShape
@@ -58,7 +59,7 @@ fun DateFieldWithIcon(
         )
         Image(
             painter = rememberAsyncImagePainter(R.drawable.ic_calender),
-            contentDescription = "Calendar Icon",
+            contentDescription = stringResource(R.string.cd_calendar),
             modifier = Modifier
                 .clip(CustomCornerShape(topRight = 16.dp, bottomRight = 16.dp))
                 .background(MaterialTheme.colorScheme.background)

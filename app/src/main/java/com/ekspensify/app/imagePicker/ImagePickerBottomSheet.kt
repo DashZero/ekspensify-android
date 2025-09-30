@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
@@ -78,7 +79,7 @@ fun ImagePickerBottomSheet(
         ) {
             Icon(
                 painterResource(R.drawable.ic_camera),
-                contentDescription = "Camera",
+                contentDescription = stringResource(R.string.cd_camera),
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
                     .background(MaterialTheme.extendedColors.imageBg)
@@ -97,7 +98,7 @@ fun ImagePickerBottomSheet(
             )
             Icon(
                 painterResource(R.drawable.ic_gallery),
-                contentDescription = "Gallery",
+                contentDescription = stringResource(R.string.cd_gallery),
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
                     .background(MaterialTheme.extendedColors.imageBg)

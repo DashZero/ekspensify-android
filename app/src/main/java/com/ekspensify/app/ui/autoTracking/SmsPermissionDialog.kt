@@ -181,7 +181,7 @@ private fun Highlights() {
 private fun SmsIcon() {
     Icon(
         rememberAsyncImagePainter(R.drawable.ic_sms),
-        contentDescription = "",
+        contentDescription = stringResource(id = R.string.sms_icon_desc),
         tint = MaterialTheme.extendedColors.iconColor,
         modifier = Modifier
             .width(60.dp)

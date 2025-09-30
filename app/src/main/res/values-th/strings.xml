@@ -4,7 +4,7 @@
     <string name="login">เข้าสู่ระบบ</string>
 
     <!-- Onboarding strings (Thai) -->
-    <string name="onboarding_title_1">Ekspensify</string>
+    <string name="onboarding_title_1">HoneyPot</string>
     <string name="onboarding_desc_1">การติดตามการเงินที่ง่ายขึ้น ให้คุณลดความเครียดและสนุกได้มากขึ้น!</string>
     <string name="onboarding_title_2">ติดตามอัตโนมัติ</string>
     <string name="onboarding_desc_2">ติดตามและจัดหมวดหมู่ค่าใช้จ่ายของคุณโดยอัตโนมัติแบบเรียลไทม์</string>
@@ -41,5 +41,17 @@
     <string name="no_otps">ไม่มี OTP</string>
     <string name="no_personal_sms">ไม่มี SMS ส่วนบุคคล</string>
     <string name="fully_local">ข้อมูลอยู่ภายในเครื่องเท่านั้น</string>
+    <string name="bullet">•</string>
+    <string name="sms_icon_desc">ไอคอน SMS</string>
+    <string name="empty_image_desc">ภาพประกอบเมื่อไม่มีรายการ</string>
+    <string name="no_account_image_desc">ภาพประกอบเมื่อไม่มีบัญชี</string>
+
+    <!-- accessibility content descriptions (Thai) -->
+    <string name="cd_back">ย้อนกลับ</string>
+    <string name="cd_camera">กล้อง</string>
+    <string name="cd_gallery">คลังภาพ</string>
+    <string name="cd_settings">การตั้งค่าเทมส์</string>
+    <string name="cd_calendar">ไอคอนปฏิทิน</string>
+    <string name="cd_confirm">ยืนยัน</string>
 
 </resources>

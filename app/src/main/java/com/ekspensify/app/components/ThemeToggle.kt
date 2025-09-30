@@ -11,6 +11,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberAsyncImagePainter
 import com.ekspensify.app.R
@@ -27,7 +28,7 @@ fun ThemeToggle(viewModel: ThemeViewModel = hiltViewModel()) {
         else -> R.drawable.ic_system_theme
     }
     Icon(painter = rememberAsyncImagePainter(icon),
-        contentDescription = "Settings",
+        contentDescription = stringResource(R.string.cd_settings),
         tint = MaterialTheme.extendedColors.iconColor,
         modifier = Modifier
             .padding(end = 20.dp)
