@@ -53,7 +53,6 @@ import com.honeypot.app.ui.dashboard.transactions.viewmodel.TransactionViewModel
 import com.honeypot.app.ui.theme.extendedColors
 import com.honeypot.app.utils.NavigationRequestKeys
 import com.honeypot.app.utils.getViewModelStoreOwner
-import com.onesignal.OneSignal
 
 
 @Composable
@@ -88,11 +87,6 @@ fun BottomNav(
             isFabExpanded = false
         }
     }
-
-    LaunchedEffect(Unit) {
-        OneSignal.Notifications.requestPermission(false)
-    }
-
 
     val items = remember {
         listOf(
@@ -249,7 +243,6 @@ private fun ContentView(
     }
 
 }
-
 
 
 

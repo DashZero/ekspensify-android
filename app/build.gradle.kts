@@ -11,14 +11,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 
-    id("com.google.gms.google-services")
-
-    id("com.google.firebase.firebase-perf")
-
-    id("com.google.firebase.crashlytics")
 }
-
-
 
 android {
     namespace = "com.honeypot.app"
@@ -47,7 +40,6 @@ android {
 
         // Use safe quoted defaults to avoid nulls at configuration time. These are placeholders only.
         buildConfigField("String", "CLIENT_ID", properties.getProperty("CLIENT_ID")?.let { "\"$it\"" } ?: "\"local_client_id_placeholder\"")
-        buildConfigField("String", "ONESIGNAL_APP_ID", properties.getProperty("ONESIGNAL_APP_ID")?.let { "\"$it\"" } ?: "\"onesignal_local_placeholder\"")
     // Azure OpenAI config (optional: set in local.properties)
     buildConfigField("String", "AZURE_OPENAI_ENDPOINT", properties.getProperty("AZURE_OPENAI_ENDPOINT")?.trim()?.let { "\"${it}\"" } ?: "\"https://afaihub.cognitiveservices.azure.com/\"")
     buildConfigField("String", "AZURE_OPENAI_DEPLOYMENT", properties.getProperty("AZURE_OPENAI_DEPLOYMENT")?.trim()?.let { "\"${it}\"" } ?: "\"gpt-5-mini\"")
@@ -191,6 +183,7 @@ dependencies {
      */
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    implementation(libs.guava.android)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
 
@@ -212,12 +205,6 @@ dependencies {
     /**
      * Fire base
      */
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.perf)
-    implementation(libs.firebase.crashlytics)
-
-
     /**
      * Google sign in
      */
@@ -260,14 +247,6 @@ dependencies {
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     implementation(libs.androidx.constraintlayout.compose)
-
-
-    /**
-     * one signal
-     */
-    implementation(libs.onesignal)
-
-
     // WorkManager for background tasks
     implementation(libs.androidx.work.runtime.ktx)
 

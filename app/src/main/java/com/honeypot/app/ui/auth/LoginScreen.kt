@@ -52,7 +52,6 @@ import com.honeypot.app.utils.handleApiResponse
 import com.honeypot.app.utils.isValidEmail
 import com.honeypot.app.utils.toastUtils.CustomToast
 import com.honeypot.app.utils.toastUtils.CustomToastModel
-import com.onesignal.OneSignal
 
 @Composable
 fun LoginScreen(
@@ -107,7 +106,6 @@ fun LoginScreen(
                         authViewModel.spUtilsManager.updateUser(user)
                         authViewModel.spUtilsManager.updateAccessToken(token!!)
                         authViewModel.spUtilsManager.updateLoginStatus(true)
-                        OneSignal.login(user?.id.toString())
                         goToNextScreenAfterLogin(navController)
                     }
                 }
@@ -213,5 +211,4 @@ fun LoginImage() {
             .padding(20.dp)
     )
 }
-
 

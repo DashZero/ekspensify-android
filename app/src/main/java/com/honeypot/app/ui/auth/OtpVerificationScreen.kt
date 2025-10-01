@@ -50,7 +50,6 @@ import com.honeypot.app.utils.handleApiResponseWithError
 import com.honeypot.app.utils.toastUtils.CustomToast
 import com.honeypot.app.utils.toastUtils.CustomToastModel
 import com.honeypot.app.utils.toastUtils.ToastType
-import com.onesignal.OneSignal
 import kotlinx.coroutines.delay
 
 @Composable
@@ -105,7 +104,6 @@ fun OtpVerificationScreen(
                         authViewModel.spUtilsManager.updateUser(user)
                         authViewModel.spUtilsManager.updateAccessToken(token!!)
                         authViewModel.spUtilsManager.updateLoginStatus(true)
-                        OneSignal.login(user!!.id.toString())
                         goToNextScreenAfterLogin(navController)
                     }
                 }
@@ -213,4 +211,3 @@ fun OtpVerificationScreen(
         ShowLoader(isLoading)
     }
 }
-
